@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KDR e-vote &mdash; Electronic Voting Service</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+  body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+  body {font-size:16px;}
+  .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+  .w3-half img:hover{opacity:1}
+  </style>
+  
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+      <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/magnific-popup.css">
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  
+      <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  
+      <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  
+      <link rel="stylesheet" href="css/aos.css">
+  
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+    <h3 class="w3-padding-64"><b>전자투표</b></h3>
+    </div>
+    <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">후보</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">투표하기</a> 
+    </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>전자투표</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxxlarge w3-text-red"><b>후보</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    </div>
+    
+    <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+    <div class="w3-half">
+        <img src="/images/no1.jfif" style="width:50%" onclick="onClick(this)" alt=
+        "출생 : 1953년 1월 24일, 경상남도 거제
+        소속 : 더불어민주당
+        가족 : 배우자 김정숙
+        학력 : 경희대학교 법학 학사
+        수상 : 2017년 대서양협의회 세계시민상">
+        <h1>기호 1 문재인<br>더불어민주당</h1>
+        <img src="/images/no3.jfif" style="width:50%" onclick="onClick(this)" alt=
+        "출생 : 1962년 2월 26일
+        소속 : 바른미래당
+        가족 : 배우자 김미경, 아버지 안영모
+        학력 : 펜실베이니아대학교 와튼스쿨 경영학 석사
+        경력 : 2018.09~ 독일 막스플랑크 혁신과경쟁연구소 방문연구원 /2018.03 바른미래당 인재영입위원장">
+        <h1>기호 3 안철수<br>국민의당</h1>
+        
+
+    </div>
+
+    <div class="w3-half">
+        <img src="/images/no2.jfif" style="width:50%" onclick="onClick(this)" alt=
+        "출생 : 1954년 12월 5일, 경상남도 창녕
+        학력 : 고려대학교 행정학 학사
+        수상 : 2014년 제49회 전국여성대회 우수 지방자치단체장상
+        경력 : 2014.07~2017.04 제36대 경상남도 도지사/2011.07 한나라당 대표최고위원">
+        <h1>기호 2 홍준표<br>자유한국당</h1>
+        <img src="/images/no4.jfif" style="width:50%" onclick="onClick(this)" alt=
+        "출생 : 1958년 1월 7일, 대구광역시
+        소속 : 바른미래당(대구 동구을)
+        학력 : 위스콘신대학교 대학원 경제학 박사
+        수상 : 2016년 제18회 백봉 라용균 선생 기념사업회 백봉신사상 대상">
+        <h1>기호 4 유승민<br>바른정당</h1>
+    </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+    </div>
+    </div>
+
+    <!-- Services -->
+    <div class="w3-container" id="services" style=" margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>투표하기</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    
+    <select id="searchType"style="padding: 10px;text-align: center">
+    <option>조회</option>
+    <option value="0">기호 번호</option>
+    <option value="1">이름</option>
+    </select>
+    <br><br>
+    <div id="login_result_div" class="input-group mb-3">
+        <input id="car_num_input" type="text" class="form-control border-secondary text-white bg-transparent" placeholder="기호 번호 또는 이름을 입력하세요 ex) 기호0번 / 홍길동"  name="car_num" style="color:black">
+        <div class="input-group-append" >
+            <button id="candidateInfoSearch_btn" class="btn btn-primary text-white" type="button">투표</button>
+        </div>
+    </div>
+    
+    <br><br>
+    <div id="carBasicInfoSearch_div">
+    <h1>조회 결과 예</h1> <br>
+    <img src='images/example.PNG' width="400px">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+          
+        
+
+
+
+
+
+
+
+
+    </div>
+    
+    
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+    
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+}
+
+</script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/typed.js"></script>
+            <script>
+            var typed = new Typed('.typed-words', {
+            strings: [" Web"," Mobile"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+            });
+            </script>
+
+<script src="js/my.js"></script>  
+<script src="js/main.js"></script>
+
+</body>
+</html>
